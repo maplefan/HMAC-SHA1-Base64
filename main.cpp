@@ -1,9 +1,3 @@
-# HMAC-SHA1-Base64
-HMAC-SHA1&amp;Base64加密过程的Python实现以及使用C++实现。
-# How to use
-
-``` cpp
-// HMAC-SHA1 Base64 test program
 #include<iostream>
 #include"hmac.h"
 #include"sha1.h"
@@ -25,12 +19,3 @@ int main(int argc, _TCHAR* argv[])
 	BinToBase64(binDight , base64Str);//原始二进制转化为Base64
 	cout<<"结果为："<<base64Str<<endl;
 }
-```
-
-``` python
-// HMAC-SHA1 Base64 test program
-def hash_hmac(code, key):
-  """sha1加密签名算法"""
-  hmac_code = hmac.new(key.encode(), code.encode(), sha1).digest()
-  return base64.b64encode(hmac_code).decode()
-```
